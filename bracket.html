@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2026 Stanley Cup Bracket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>2026 Stanley Cup Bracket</h2>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="bracket.html">Bracket</a>
+    <a href="quiz.html">Quiz</a>
+</nav>
+<main>
+    <div id="step1">
+        <h3>Step 1: Round 1</h3>
+        <div class="bracket-grid">
+            <div class="conf-section">
+                <h4>Eastern Conference</h4>
+                <label>BUF vs BOS:</label> <select id="r1_s1"></select><br>
+                <label>TBL vs MTL:</label> <select id="r1_s2"></select><br>
+                <label>CAR vs OTT:</label> <select id="r1_s3"></select><br>
+                <label>PIT vs PHI:</label> <select id="r1_s4"></select>
+            </div>
+            <div class="conf-section">
+                <h4>Western Conference</h4>
+                <label>COL vs LAK:</label> <select id="r1_s5"></select><br>
+                <label>DAL vs MIN:</label> <select id="r1_s6"></select><br>
+                <label>VGK vs UTA:</label> <select id="r1_s7"></select><br>
+                <label>EDM vs ANA:</label> <select id="r1_s8"></select>
+            </div>
+        </div>
+        <button onclick="saveRound1()">Save Round 1</button>
+    </div>
+
+    <div id="step2" style="display:none;">
+        <h3>Step 2: Round 2</h3>
+        <div class="input-group">
+            <select id="r2_w1"></select>
+            <select id="r2_w2"></select>
+            <select id="r2_w3"></select>
+            <select id="r2_w4"></select>
+        </div>
+        <button onclick="saveRound2()">Save Round 2</button>
+    </div>
+
+    <div id="step3" style="display:none;">
+        <h3>Step 3: Conference Champions</h3>
+        <div class="input-group">
+            <select id="f1"></select>
+            <select id="f2"></select>
+        </div>
+        <button onclick="saveFinals()">Save Finalists</button>
+    </div>
+
+    <div id="step4" style="display:none;">
+        <h3>Final Step: Stanley Cup Champion</h3>
+        <select id="champion"></select>
+        <button onclick="saveChampion()">Crown Champion</button>
+    </div>
+
+    <p id="error" style="color:red; font-weight:bold;"></p>
+    <div id="savedBracket"></div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
